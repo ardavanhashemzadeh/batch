@@ -14,5 +14,4 @@ timeout %WaitTime% > nul 2>&1
 goto loop
 
 :eof
-date
-echo Connection Died
+echo %DATE% %TIME% Connection Died
