@@ -4,7 +4,7 @@ REM September 15 2017
 REM Logoff all disconnected sessions
 REM on all servers in a list
 
-SET EableDelayedExpansion
+SETLOCAL EableDelayedExpansion
 SET SERVERS=server1,server2,server3
 
 FOR %%s IN (%SERVERS%) DO (
