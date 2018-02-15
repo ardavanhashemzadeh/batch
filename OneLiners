@@ -1,0 +1,2 @@
+May I?
+icacls "c:\Program Files (x86)\X-Charge" /grant:r "Domain Users":(OI)(CI)M
