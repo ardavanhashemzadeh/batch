@@ -3,3 +3,6 @@ icacls "c:\Program Files (x86)\X-Charge" /grant:r "Domain Users":(OI)(CI)M
 
 Remote Silent Install of MSI
 psexec \\MACHINE cmd /c "msiexec.exe /i 'MSI' /quiet /norestart"
+
+Silent install of OpenDental.msi to custom folder with a verbose log
+msiexec /i OpenDental.msi INSTALLDIR=c:\opendental /qn /lv install.log
