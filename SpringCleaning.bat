@@ -2,6 +2,8 @@ REM Dell Zino
 
 wmic product where 'name like "adobe%"' call uninstall
 
+wmic product where 'name like "AMD Fusion Media Explorer%"' call uninstall
+
 wmic product where 'name like "bing %"' call uninstall
 
 wmic product where 'name like "catalyst %"' call uninstall
@@ -11,6 +13,8 @@ wmic product where 'name like "ccc%"' call uninstall
 wmic product where 'name like "cisco%"' call uninstall
 
 wmic product where 'name like "consumer in-home agreement%"' call uninstall
+
+wmic product where 'name like "CrashPlan%"' call uninstall
 
 wmic product where 'name like "dell%"' call uninstall
 
@@ -27,6 +31,8 @@ wmic product where 'name like "LogMeIn Hamachi%"' call uninstall
 wmic product where 'name like "Mesh Runtime%"' call uninstall
 
 wmic product where 'name like "Messenger Companion%"' call uninstall
+
+wmic product where 'name like "Microsoft SQL Server%"' call uninstall
 
 wmic product where 'name like "Microsoft Office%"' call uninstall
 
