@@ -1,8 +1,0 @@
-wmic product where 'name like "%"' call uninstall
-wmic product where 'name like "%"' call uninstall
-wmic product where 'name like "%"' call uninstall
-
-wmic product where 'name like "dell%"' call uninstall
-wmic product where 'name like "lenovo%"' call uninstall
-wmic product where 'name like "microsoft office%"' call uninstall
-wmic product where 'name like "windows live%"' call uninstall
