@@ -7,6 +7,7 @@ wmic product where 'name like "ccc%%"' call uninstall
 wmic product where 'name like "cisco%%"' call uninstall
 wmic product where 'name like "consumer in-home agreement%%"' call uninstall
 wmic product where 'name like "CrashPlan%%"' call uninstall
+wmic product where 'name like "d3dx10%%"' call uninstall
 wmic product where 'name like "dell%%"' call uninstall
 wmic product where 'name like "ebay%%"' call uninstall
 wmic product where 'name like "google update helper%%"' call uninstall
