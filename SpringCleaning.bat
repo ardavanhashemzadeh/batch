@@ -1,7 +1,7 @@
 REM Dell Zino
 wmic product where 'name like "adobe%%"' call uninstall
 wmic product where 'name like "AMD Fusion Media Explorer%%"' call uninstall
-wmic product where 'name like "Apple Mobile Device Support%%"' call uninstall
+wmic product where 'name like "Apple%%Support%%"' call uninstall
 wmic product where 'name like "Apple Software Update%%"' call uninstall
 wmic product where 'name like "bing %%"' call uninstall
 wmic product where 'name like "Bonjour%%"' call uninstall
