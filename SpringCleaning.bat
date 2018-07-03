@@ -1,17 +1,26 @@
 REM Dell Zino
 wmic product where 'name like "adobe%%"' call uninstall
 wmic product where 'name like "AMD Fusion Media Explorer%%"' call uninstall
+wmic product where 'name like "Apple Mobile Device Support%%"' call uninstall
+wmic product where 'name like "Apple Software Update%%"' call uninstall
 wmic product where 'name like "bing %%"' call uninstall
-wmic product where 'name like "catalyst %%"' call uninstall
+wmic product where 'name like "Bonjour%%"' call uninstall
+wmic product where 'name like "%%catalyst %%"' call uninstall
 wmic product where 'name like "ccc%%"' call uninstall
 wmic product where 'name like "cisco%%"' call uninstall
+wmic product where 'name like "ClinCheck%%"' call uninstall
 wmic product where 'name like "consumer in-home agreement%%"' call uninstall
 wmic product where 'name like "CrashPlan%%"' call uninstall
 wmic product where 'name like "d3dx10%%"' call uninstall
 wmic product where 'name like "dell%%"' call uninstall
+wmic product where 'name like "DicomViewer%%"' call uninstall
 wmic product where 'name like "ebay%%"' call uninstall
+wmic product where 'name like "DicomViewer%%"' call uninstall
+wmic product where 'name like "Easy Smart Configuration Utility%%"' call uninstall
 wmic product where 'name like "google update helper%%"' call uninstall
 wmic product where 'name like "GoToAssist%%"' call uninstall
+wmic product where 'name like "HASP Licence Manager%%"' call uninstall
+wmic product where 'name like "iTunes%%"' call uninstall
 wmic product where 'name like "java%%"' call uninstall
 wmic product where 'name like "junk mail filter%%"' call uninstall
 wmic product where 'name like "LogMeIn Hamachi%%"' call uninstall
@@ -27,6 +36,7 @@ wmic product where 'name like "Roxio%%"' call uninstall
 wmic product where 'name like "Skins%%"' call uninstall
 wmic product where 'name like "Sonic Cine Player Decoder Pack%%"' call uninstall
 wmic product where 'name like "THX TruStudio PC%%"' call uninstall
+wmic product where 'name like "%%Toolbar%%"' call uninstall
 wmic product where 'name like "TrustedID%%"' call uninstall
 wmic product where 'name like "Ulterius Server%%"' call uninstall
 wmic product where 'name like "Windows Live%%"' call uninstall
