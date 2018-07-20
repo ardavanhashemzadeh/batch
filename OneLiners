@@ -6,3 +6,6 @@ psexec \\MACHINE cmd /c "msiexec.exe /i 'MSI' /quiet /norestart"
 
 Silent install of OpenDental.msi to custom folder with a verbose log
 msiexec /i OpenDental.msi INSTALLDIR=c:\opendental /qn /lv install.log
+
+Delete all printjobs on all machines in a text file
+wmic /node:@listofpcs.txt printjob delete
