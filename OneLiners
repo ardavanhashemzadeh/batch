@@ -9,3 +9,6 @@ msiexec /i OpenDental.msi INSTALLDIR=c:\opendental /qn /lv install.log
 
 Delete all printjobs on all machines in a text file
 wmic /node:@listofpcs.txt printjob delete
+
+REM Make FreeDentalConfig.xml readonly on multiple machines using psexec (must be in path)
+FOR %s IN (srv1,srv2) DO (psexec \\%s cmd /c attrib +R "C:\Program Files (x86)\Open Dental\FreeDentalConfig.xml")
