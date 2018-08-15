@@ -15,3 +15,6 @@ FOR %s IN (srv1,srv2) DO (psexec \\%s cmd /c attrib +R "C:\Program Files (x86)\O
 
 REM Copy only files that don't exist in the target destination
 For %F In ("*.*") Do If Not Exist "\\wssds\opendentimages\opendentimages\vxdataws\images\%~nxF" Copy "%F" "\\wssds\opendentimages\opendentimages\vxdataws\images\%~nxF"
+
+REM Copy file to same folder on multiple devices
+FOR %s IN (srv1,srv2) DO (copy FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\")
