@@ -1,13 +1,13 @@
-May I?
+REM Grant "Domain Users" recursive read/write perms for x-charge folder
 icacls "c:\Program Files (x86)\X-Charge" /grant:r "Domain Users":(OI)(CI)M
 
-Remote Silent Install of MSI
+REM Remote Silent Install of MSI
 psexec \\MACHINE cmd /c "msiexec.exe /i 'MSI' /quiet /norestart"
 
-Silent install of OpenDental.msi to custom folder with a verbose log
+REM Silent install of OpenDental.msi to custom folder with a verbose log
 msiexec /i OpenDental.msi INSTALLDIR=c:\opendental /qn /lv install.log
 
-Delete all printjobs on all machines in a text file
+REM Delete all printjobs on all machines in a text file
 wmic /node:@listofpcs.txt printjob delete
 
 REM Make FreeDentalConfig.xml readonly on multiple machines using psexec (must be in path)
