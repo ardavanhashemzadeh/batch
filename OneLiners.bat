@@ -18,3 +18,9 @@ For %F In ("*.*") Do If Not Exist "\\wssds\opendentimages\opendentimages\vxdataw
 
 REM Copy file to same folder on multiple devices
 FOR %s IN (srv1,srv2) DO (copy /y FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\")
+
+REM ReMap Network Drives, broken into lines for easy readability
+net use z: /delete &^
+net use z: \\server1\share1 /persistent:yes &^
+net use y: /delete &^
+net use y: \\server2\share2 /persistent:yes
