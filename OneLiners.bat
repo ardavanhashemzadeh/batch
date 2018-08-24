@@ -26,3 +26,6 @@ net use y: /delete &^
 net use y: \\server2\share2 /persistent:yes
 
 FOR %s IN (srv1,srv2) DO (copy veyon-4.1.1.0-win32-setup.exe "\\%s\c$\program files\ardy\" && ..\pstools\psexec \\%s "c:\program files\ardy\veyon-4.1.1.0-win32-setup.exe" /S /NoMaster 
+
+REM Recursively copy only nonexistant files using robocopy
+robocopy source destination /E /XC /XN /XO
