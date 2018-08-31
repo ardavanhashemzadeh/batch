@@ -29,3 +29,6 @@ FOR %s IN (srv1,srv2) DO (copy veyon-4.1.1.0-win32-setup.exe "\\%s\c$\program fi
 
 REM Recursively robocopy only nonexistant files
 robocopy source destination /E /XC /XN /XO
+
+REM Copy file to same folder on multiple devices making a log of failiures
+FOR %s IN (srv1,srv2) DO (copy /y FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\" || echo %s >> %TEMP%\rdcopyfail.log) & type %TEMP%\rdcopyfail.log
