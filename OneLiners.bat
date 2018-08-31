@@ -31,4 +31,6 @@ REM Recursively robocopy only nonexistant files
 robocopy source destination /E /XC /XN /XO
 
 REM Copy file to same folder on multiple devices making a log of failiures
-ECHO Fail List From %DATE% %TIME%: >> %TEMP%\rdcopyfail.log & ( FOR %s IN (srv1,srv2) DO ( copy /y FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\" || echo %s >> %TEMP%\rdcopyfail.log )) & TYPE %TEMP%\rdcopyfail.log
+ECHO TYPE NUL > %TEMP%\rdcopyfail.log & ( FOR %s IN (srv1,srv2) DO @( copy /y FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\" || ECHO %s >> %TEMP%\rdcopyfail.log ) > NUL 2>&1 ) & TYPE %TEMP%\rdcopyfail.log
+REM Retry failures from the log
+FOR /F %s IN (%TEMP%\rdcopyfail.log) DO @( copy /y FreeDentalConfig.xml "\\%s\c$\Program Files (x86)\Open Dental\" || ECHO %s >> %TEMP%\rdcopyfail.log ) > NUL 2>&1  & TYPE %TEMP%\rdcopyfail.log
