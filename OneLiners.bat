@@ -1,3 +1,6 @@
+REM Ping Sweep
+for /l %i in (1,1,254) do @ping -n 1 -w 100 10.0.0.%i | find "Reply"
+
 REM Grant "Domain Users" recursive read/write perms for x-charge folder
 icacls "c:\Program Files (x86)\X-Charge" /grant:r "Domain Users":(OI)(CI)M
 
