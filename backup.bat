@@ -1,1 +1,1 @@
-7z a -r Backup -p<password>
+7z a -t7z -mhe=on -r -p<password> backup-%DATE% d:\temp
