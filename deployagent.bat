@@ -2,7 +2,7 @@
 REM Ardavan Hashemzadeh
 REM 08232019
 
-SET EnableDelayedExpansion
+SETLOCAL EnableDelayedExpansion
 
 set agent=\\server\share\agent_install.exe
 set tdsrp=\\server\share\tdsrp.bat
