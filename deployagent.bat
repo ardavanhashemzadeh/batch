@@ -9,8 +9,8 @@ set tdsrp=\\server\share\tdsrp.bat
 
 FOR %%h IN (%*) DO (
 
-MKDIR \\%1\c$\temp
-COPY %agent% \\%1\c$\temp\
-COPY %tdsrp% \\%1\c$\windows
-PSEXEC \\%1 CMD /C "tdsrp \temp\agent_install.exe/silent"
+MKDIR \\%%h\c$\temp
+COPY %agent% \\%%h\c$\temp\
+COPY %tdsrp% \\%%h\c$\windows
+PSEXEC \\%%h CMD /C "tdsrp \temp\agent_install.exe/silent"
 )
